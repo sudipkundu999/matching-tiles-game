@@ -11,14 +11,14 @@ const shuffleArray = (array) => {
 }
 
 const getColorsArray = (total) => {
-  const halfColorsArray = Array(total / 2).fill().map((_) => getRandomHexColor());
-  const fullcolorsArray = [...halfColorsArray, ...halfColorsArray];
-  return shuffleArray(fullcolorsArray);
+  const halfColorsArray = Array(total / 2).fill().map(() => getRandomHexColor());
+  const fullColorsArray = [...halfColorsArray, ...halfColorsArray];
+  return shuffleArray(fullColorsArray);
 }
 
 export const getGameBoardCells = (total) => {
   const columns = COLUMNS;
-  const rows = total / columns;
+  const rows = Math.floor(total / columns);
   const colorsArray = getColorsArray(rows * columns);
   const gameBoardCells = new Array(columns).fill().map((_, columnIndex) =>
     Array(rows).fill().map((_, rowIndex) => ({
