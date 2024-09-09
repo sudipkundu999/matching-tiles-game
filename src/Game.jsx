@@ -97,6 +97,21 @@ const MatchingTilesGame = ({ total }) => {
     );
   };
 
+  const GameWon = () => {
+    return (
+      <div id="game-won">
+        <span>🎉 Hurray! You won in {movesPlayed} moves!</span>
+        <button
+          id="play-again-button"
+          onClick={resetGame}
+          disabled={!isGameStarted}
+        >
+          Let's play again
+        </button>
+      </div>
+    );
+  };
+
   const GameInfo = () => {
     return (
       <div id="game-info">
@@ -133,8 +148,14 @@ const MatchingTilesGame = ({ total }) => {
 
   return (
     <>
-      <GameInfo />
-      <GameBoard />
+      {totalMatchingTilesFound === total ? (
+        <GameWon />
+      ) : (
+        <>
+          <GameInfo />
+          <GameBoard />
+        </>
+      )}
     </>
   );
 };

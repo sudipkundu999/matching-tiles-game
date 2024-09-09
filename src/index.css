@@ -24,6 +24,22 @@ button {
   gap: 8px;
 }
 
+#game-won {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#play-again-button {
+  height: unset;
+  width: unset;
+  border: 0.5px solid grey;
+  border-radius: 12px;
+  padding: 4px 8px;
+}
+
 #reset-button {
   height: unset;
   width: unset;
