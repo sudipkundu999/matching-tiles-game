@@ -1,0 +1,33 @@
+:root {
+  --size: 100px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 95vh;
+}
+
+button {
+  height: var(--size);
+  width: var(--size);
+  border: none;
+  cursor: pointer;
+}
+
+#game-info {
+  display: flex;
+  justify-content: flex-start;
+  width: 415px;
+  gap: 8px;
+}
+
+#reset-button {
+  height: unset;
+  width: unset;
+  border: 0.5px solid grey;
+  border-radius: 8px;
+  margin-left: auto;
+}
